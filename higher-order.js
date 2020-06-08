@@ -21,9 +21,9 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
-
-
+let evenNumbers = mixedNumbers.filter(function (number) {
+	return number % 2 === 0;
+});
 
 ////////// PROBLEM 2 //////////
 
@@ -44,7 +44,10 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
+let postTaxPrices = prices.map(function (number) {
+	let afterTax = number * 1.07;
+	return afterTax;
+});
 
 
 
@@ -63,8 +66,9 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
-
+let totalPopulation = populations.reduce(function (total, number) {
+	return total + number;
+});
 
 
 ////////// PROBLEM 4 //////////
@@ -89,8 +93,13 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
+let myStrongest = monstersInYourPocket.filter(function (par) {
+	for (let key in par) {
+		if (par[key] > 200) {
+			return par[key];
+		}
+	}
+});
 
 
 ////////// PROBLEM 5 //////////
@@ -106,7 +115,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals // Code here
+// let orderTotals = orders.map();
 
 
 
@@ -126,6 +135,13 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
 
+let bobsTotal = purchases.reduce(function (total, number){
+	// console.log(number.owner);
+	// console.log(number.price);
+	if (number.owner == "Bob") {
+		return number.price;
+	}
+});
 
+console.log(bobsTotal);

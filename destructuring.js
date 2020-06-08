@@ -42,7 +42,6 @@ function greeting( obj ) {
 }
 
 
-
 ////////// PROBLEM 3 //////////
 
 /*
@@ -59,7 +58,6 @@ function totalPopulation(obj) {
 }
 
 
-
 ////////// PROBLEM 4 //////////
 
 /*
@@ -74,9 +72,9 @@ function ingredients(obj) {
   let {carb, fat, protein} = obj;
   let array = []
   array.push(carb, fat, protein);
+  console.log(array);
   return array;
 }
-
 
 
 ////////// PROBLEM 5 //////////
@@ -92,22 +90,27 @@ function ingredients(obj) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+//
+let obj = {
+  first: 5,
+  second: 2,
+  third: 3,
+}
 
-// function largeNumbers({first, second, third}) {
-//   let array = [first, second, third];
-//   let length = array.length;
-//   for(let i = 0; i < length; i++) {
-//     if (array[i] < i) {
-//       return array[i];
-//     }
-//   }
-// }
-
-function largeNumbers({first, second, third}) {
-  return Math.min(first, second, third);
+let largeNumbers = (obj) => {
+  let {first, second, third} = obj;
+  let array = [first, second, third];
+  let length = array.length;
+  for (let i = 1; i < length; i++) {
+    if (array[0] < array[i]) {
+      return array[0];
+      console.log(array[0])
+    }
+  }
 }
 
 
+largeNumbers(obj);
 
 ////////// PROBLEM 6 //////////
 
@@ -117,12 +120,25 @@ function largeNumbers({first, second, third}) {
   Find the longest array and return that array.
 */
 
-
-function numberGroups = ({a, b, c}) {
-  let array = [a, b, c];
-  for(let i = 1; i < array.length; i++) {
-    if (array[a].length > array[i].length) {
-      return array[a];
-    }
-  }
-}
+// let obj = {
+//   a: [1, 2],
+//   b: [1, 2, 3],
+//   c: [1, 2 , 3, 4]
+// }
+//
+//
+// let numberGroups = (obj) => {
+//   let {a, b, c} = obj;
+//   let array = [a, b, c];
+//   for(let i = 0; i < array.length; i++) {
+//     if (array[i].length > array[i + 1].length) {
+//       console.log(array[i]);
+//       return array[i];
+//     } else {
+//       console.log(array[i + 1]);
+//       return array[i + 1];
+//     }
+//   }
+// }
+//
+// numberGroups(obj);
