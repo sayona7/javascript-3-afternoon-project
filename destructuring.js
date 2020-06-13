@@ -92,7 +92,7 @@ function ingredients(obj) {
 */
 //
 let obj = {
-  first: 5,
+  first: 1,
   second: 2,
   third: 3,
 }
@@ -104,13 +104,12 @@ let largeNumbers = (obj) => {
   for (let i = 1; i < length; i++) {
     if (array[0] < array[i]) {
       return array[0];
-      console.log(array[0])
+    } else if (array[0] > array[i]) {
+      return array[i];
     }
   }
 }
 
-
-largeNumbers(obj);
 
 ////////// PROBLEM 6 //////////
 
@@ -120,25 +119,16 @@ largeNumbers(obj);
   Find the longest array and return that array.
 */
 
-// let obj = {
-//   a: [1, 2],
-//   b: [1, 2, 3],
-//   c: [1, 2 , 3, 4]
-// }
-//
-//
-// let numberGroups = (obj) => {
-//   let {a, b, c} = obj;
-//   let array = [a, b, c];
-//   for(let i = 0; i < array.length; i++) {
-//     if (array[i].length > array[i + 1].length) {
-//       console.log(array[i]);
-//       return array[i];
-//     } else {
-//       console.log(array[i + 1]);
-//       return array[i + 1];
-//     }
-//   }
-// }
-//
-// numberGroups(obj);
+function numberGroups({a, b, c}) {
+  let array = [a, b, c];
+  let result;
+  for (let i = 1; i <= array.length; i++) {
+    if (array[i] > array[0]) {
+      result = array[i];
+    } else if (array[i] < array[0]) {
+      result = array[0];
+    }
+  }
+  return result;
+}
+

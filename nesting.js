@@ -75,11 +75,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
     3. Return the updated array.
 */
-function removeDuplicates() {
-
+function removeDuplicates(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j < arr.length; j++) {
+      console.log(arr[i], arr[j]);
+      if (arr[i] === arr[j] && arr[i] != arr[]) {
+        arr.splice(j, 1);
+      }
+    }
+  }
+  return arr;
 }
 
-
+// console.log(removeDuplicates(workplaceAccidents));
 
 ////////// PROBLEM 3 //////////
 
@@ -170,7 +178,7 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-console.log(numsArr.length);
+// console.log(numsArr.length);
 
 function looper(array) {
   for (let i = 0; i < array.length; i++) {
@@ -185,5 +193,5 @@ function looper(array) {
   return array;
 }
 
-looper(numsArr);
-console.log(numsArr);
+// looper(numsArr);
+// console.log(numsArr);

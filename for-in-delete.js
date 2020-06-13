@@ -136,7 +136,8 @@ function secrets(obj) {
 */
 
 function removePassword(obj) {
-  return delete obj.password;
+  delete obj.password;
+  return obj;
 }
 
 ////////// PROBLEM 6 //////////
@@ -171,13 +172,6 @@ for (let key in deleteTheBigNumbers) {
   Return the updated object.
 */
 
-// let startsK = {
-//   keys: "silver",
-//   kotek: "miau",
-//   horse: "brown",
-//   katana: "harmful",
-//   lily: "pink",
-// }
 
 function startsWithK(obj) {
   let str = "k";
@@ -189,8 +183,6 @@ function startsWithK(obj) {
   return obj;
 }
 
-// startsWithK(startsK);
-// console.log(startsK);
 
 ////////// PROBLEM 8 //////////
 
@@ -203,17 +195,11 @@ function startsWithK(obj) {
   (hint: the method includes() may be of use...)
 */
 
-// let tre = {
-//   first: "not tre",
-//   second: "treasure",
-//   third: "not re",
-//   fourth: "treasure",
-// }
 
 function hiddenTreasure(obj) {
   for (let key in obj) {
-    if (obj[key] != "treasure") {
-      delete obj[key];
+    if (!obj.key.includes("treasure")) {
+      delete obj.key;
     }
   }
   return obj;
