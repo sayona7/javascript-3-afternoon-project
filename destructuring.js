@@ -24,7 +24,6 @@ var carDetails = {
 let {color, make, model, year} = carDetails;
 
 
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -35,7 +34,7 @@ let {color, make, model, year} = carDetails;
 
 function greeting( obj ) {
   let {firstName, lastName, title} = obj;
-  
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -91,24 +90,23 @@ function ingredients(obj) {
   Find the smallest number of the three and return that number.
 */
 //
-let obj = {
-  first: 1,
-  second: 2,
-  third: 3,
-}
-
-let largeNumbers = (obj) => {
-  let {first, second, third} = obj;
-  let array = [first, second, third];
-  let length = array.length;
-  for (let i = 1; i < length; i++) {
-    if (array[0] < array[i]) {
-      return array[0];
-    } else if (array[0] > array[i]) {
-      return array[i];
-    }
-  }
-}
+// let obj = {
+//   first: 1,
+//   second: 2,
+//   third: 3,
+// }
+//
+// let largeNumbers({first, second, third}) {
+//   let array = [first, second, third];
+//   let length = array.length;
+//   for (let i = 1; i < length; i++) {
+//     if (array[0] < array[i]) {
+//       return array[0];
+//     } else if (array[0] > array[i]) {
+//       return array[i];
+//     }
+//   }
+// }
 
 
 ////////// PROBLEM 6 //////////
@@ -119,16 +117,16 @@ let largeNumbers = (obj) => {
   Find the longest array and return that array.
 */
 
-function numberGroups({a, b, c}) {
-  let array = [a, b, c];
-  let result;
-  for (let i = 1; i <= array.length; i++) {
-    if (array[i] > array[0]) {
-      result = array[i];
-    } else if (array[i] < array[0]) {
-      result = array[0];
-    }
-  }
-  return result;
-}
+// function numberGroups({a, b, c}) {
+//   let array = [a, b, c];
+//   let result;
+//   for (let i = 1; i <= array.length; i++) {
+//     if (array[i] > array[0]) {
+//       result = array[i];
+//     } else if (array[i] < array[0]) {
+//       result = array[0];
+//     }
+//   }
+//   return result;
+// }
 
