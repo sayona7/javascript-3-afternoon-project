@@ -112,10 +112,14 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // Do not edit code above.
 
 /*
-  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
+  Use a higher order method to get all the order totals after adding in the sales tax
+  (given to you as a tax rate, hint: you'll need to do some multiplication).
+   Your answer should be an array of numbers, one total for each order.
 */
 
-// let orderTotals = orders.map();
+let orderTotals = orders.map(function (element, index) {
+	return element.price + (element.price * element.tax);
+} );
 
 
 
@@ -138,7 +142,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 let startValue = 0;
 let bobsTotal = purchases.reduce(function (acc, obj, i) {
 	if (obj.owner === "Bob") {
-		console.log(obj.price)
 		return startValue += obj.price;
 	}
 
