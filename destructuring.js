@@ -89,23 +89,21 @@ function ingredients(obj) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
-//
-// let obj = {
-//   first: 1,
-//   second: 2,
-//   third: 3,
-// }
-//
-// let largeNumbers({first, second, third}) {
+
+
+// let largeNumbers( {first, second, third} ) {
 //   let array = [first, second, third];
+//   let smallest = 0;
+//   console.log(array);
 //   let length = array.length;
 //   for (let i = 1; i < length; i++) {
-//     if (array[0] < array[i]) {
-//       return array[0];
-//     } else if (array[0] > array[i]) {
-//       return array[i];
+//     if (array[0] < array[i] && array[0]) {
+//       smallest = array[0];
+//     } else  {
+//       smallest = array[i];
 //     }
 //   }
+//   return smallest;
 // }
 
 
@@ -117,16 +115,16 @@ function ingredients(obj) {
   Find the longest array and return that array.
 */
 
-// function numberGroups({a, b, c}) {
-//   let array = [a, b, c];
-//   let result;
-//   for (let i = 1; i <= array.length; i++) {
-//     if (array[i] > array[0]) {
-//       result = array[i];
-//     } else if (array[i] < array[0]) {
-//       result = array[0];
-//     }
-//   }
-//   return result;
-// }
+function numberGroups({a, b, c}) {
+  let array = [a, b, c];
+  let result;
+  for (let i = 1; i <= array.length; i++) {
+    if (array[i] > array[0]) {
+      result = array[i];
+    } else if (array[i] < array[0]) {
+      result = array[0];
+    }
+  }
+  return result;
+}
 
