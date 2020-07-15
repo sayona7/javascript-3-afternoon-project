@@ -90,21 +90,9 @@ function ingredients(obj) {
   Find the smallest number of the three and return that number.
 */
 
-
-// let largeNumbers( {first, second, third} ) {
-//   let array = [first, second, third];
-//   let smallest = 0;
-//   console.log(array);
-//   let length = array.length;
-//   for (let i = 1; i < length; i++) {
-//     if (array[0] < array[i] && array[0]) {
-//       smallest = array[0];
-//     } else  {
-//       smallest = array[i];
-//     }
-//   }
-//   return smallest;
-// }
+function largeNumbers({first, second, third}) {
+  return Math.min(first, second, third);
+}
 
 
 ////////// PROBLEM 6 //////////
